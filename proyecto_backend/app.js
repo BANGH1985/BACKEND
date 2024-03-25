@@ -32,6 +32,7 @@ class ProductManager {
             console.log("Not Found")
             return null
         } else {
+            console.log("producto encontrado")
             return searchProduct
         }
     }
@@ -42,6 +43,7 @@ try {
     manager.addProduct('Camisa', 'Camisa manga larga', 25.99, 'camisa.jpg', 'PRD001')
     manager.addProduct('Pantalon', 'Pantalón de vestir', 34.99, 'pantalon.jpg', 'PRD002')
     manager.addProduct('Camisa', 'Camisa manga corta', 19.99, 'camisa2.jpg', 'PRD001') /// agrego un producto con un codigo igual y salta el error y no lo agrega.
+    manager.getProductById(4)
 } catch (error) {
     console.error(error.message)
 }

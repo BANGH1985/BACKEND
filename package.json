@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch proyecto_backend/app.js"
+    "start": "node --watch desafios/app.js"
   },
   "keywords": [],
   "author": "",

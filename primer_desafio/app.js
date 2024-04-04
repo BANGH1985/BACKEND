@@ -31,11 +31,9 @@ class ProductManager {
         if (!searchProduct) {
             console.error("Not Found")
             return null
-        } else {
-            console.log(`producto encontrado con el ID: ${product_id} ` )
-            console.log(searchProduct)
-            return searchProduct
         }
+        return searchProduct
+        
     }
 }
 const manager = new ProductManager()

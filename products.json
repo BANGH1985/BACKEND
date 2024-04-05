@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "title": "Camisa actualizada",
-    "description": "Camisa manga larga y corta",
-    "price": 99.99,
-    "thumbnail": "producto.jpg",
-    "code": "NEW001",
+    "title": "Camisa",
+    "description": "Camisa manga larga",
+    "price": 25.99,
+    "thumbnail": "camisa.jpg",
+    "code": "PRD001",
     "stock": 100
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Pantalón",
     "description": "Pantalón de vestir",
     "price": 34.99,
@@ -18,21 +18,14 @@
     "stock": 50
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Zapatos",
     "description": "Zapatos de cuero",
     "price": 49.99,
     "thumbnail": "zapatos.jpg",
     "code": "PRD003",
     "stock": 80
-  },
-  {
-    "id": 5,
-    "title": "Camisa",
-    "description": "Camisa manga larga",
-    "price": 25.99,
-    "thumbnail": "camisa.jpg",
-    "code": "PRD001",
-    "stock": 100
+  }
+]   "stock": 80
   }
 ]

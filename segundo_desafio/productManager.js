@@ -1,4 +1,4 @@
-const fs = require('fs/promises')
+const { promises: fsPromises } = require('fs')
 
 class ProductManager {
     constructor(filePath) {
@@ -18,7 +18,8 @@ class ProductManager {
 
     saveProducts() {
         const data = JSON.stringify(this.products, null, 2)
-        fs.writeFileSync(this.path, data)
+        fsPromises.writeFile(this.path, data)
+            .catch(error => console.error('Error al guardar los productos:', error))
     }
 
     getProducts() {
@@ -134,4 +135,3 @@ try {
 } catch (error) {
     console.error(error.message)
 }
-

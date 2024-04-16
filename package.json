@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000B\u0000A\u0000C\u0000K\u0000E\u0000N\u0000D\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch segundo_desafio/productManager.js"
+    "start": "node --watch tercer_desafio/src/app.js"
   },
   "keywords": [],
   "author": "",

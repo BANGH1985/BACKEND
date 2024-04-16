@@ -11,7 +11,7 @@ class ProductManager {
         try {
             const data = fs.readFileSync(this.path, 'utf8')
             this.products = JSON.parse(data)
-        } catch (err) {
+        } catch (error) {
             this.products = []
         }
     }
@@ -48,6 +48,7 @@ class ProductManager {
         }
         this.products.push(product)
         this.saveProducts() // Guarda los productos después de agregar uno nuevo
+        console.log("Product saved")
     }
 
     getProductById(product_id) {
@@ -83,7 +84,7 @@ class ProductManager {
     }
 }
 
-const filePath = 'products.json'
+const filePath = "./products.json"
 const manager = new ProductManager(filePath)
 
 try {
@@ -113,9 +114,9 @@ try {
         thumbnail: 'zapatos.jpg',
         code: 'PRD003',
         stock: 80
-    });
+    })
 
-    // Actualizar un producto
+    /* // // Actualizar un producto
     const productIdToUpdate = 1
     const updatedFields = {
         title: 'Camisa actualizada',
@@ -123,15 +124,15 @@ try {
     }
     manager.updateProduct(productIdToUpdate, updatedFields)
 
-    // Eliminar un producto
+    // // Eliminar un producto
     const productIdToDelete = 2
-    manager.deleteProduct(productIdToDelete)
+    manager.deleteProduct(productIdToDelete) */
 
-    // Obtener un producto por ID
+    //Obtener un producto por ID
     const productIdToGet = 3
     manager.getProductById(productIdToGet)
 
-    // Obtener todos los productos
+    //Obtener todos los productos
     manager.getProducts()
 } catch (error) {
     console.error(error.message)

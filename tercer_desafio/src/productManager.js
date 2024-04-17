@@ -97,7 +97,6 @@ try {
         code: 'PRD001',
         stock: 100
     })
-
     manager.addProduct({
         title: 'Pantalón',
         description: 'Pantalón de vestir',
@@ -106,7 +105,6 @@ try {
         code: 'PRD002',
         stock: 50
     })
-
     manager.addProduct({
         title: 'Zapatos',
         description: 'Zapatos de cuero',
@@ -114,6 +112,62 @@ try {
         thumbnail: 'zapatos.jpg',
         code: 'PRD003',
         stock: 80
+    })
+    manager.addProduct({
+        title: 'Sombrero',
+        description: 'Sombrero de verano',
+        price: 15.99,
+        thumbnail: 'sombrero.jpg',
+        code: 'PRD004',
+        stock: 30
+    })
+    manager.addProduct({
+        title: 'Bufanda',
+        description: 'Bufanda de lana',
+        price: 12.50,
+        thumbnail: 'bufanda.jpg',
+        code: 'PRD005',
+        stock: 60
+    })
+    manager.addProduct({
+        title: 'Gorra',
+        description: 'Gorra deportiva',
+        price: 18.75,
+        thumbnail: 'gorra.jpg',
+        code: 'PRD006',
+        stock: 45
+    })
+    manager.addProduct({
+        title: 'Gafas de sol',
+        description: 'Gafas de sol polarizadas',
+        price: 29.99,
+        thumbnail: 'gafas.jpg',
+        code: 'PRD007',
+        stock: 20
+    })
+    manager.addProduct({
+        title: 'Bolso',
+        description: 'Bolso de cuero sintético',
+        price: 39.99,
+        thumbnail: 'bolso.jpg',
+        code: 'PRD008',
+        stock: 55
+    })
+    manager.addProduct({
+        title: 'Reloj',
+        description: 'Reloj de pulsera',
+        price: 99.99,
+        thumbnail: 'reloj.jpg',
+        code: 'PRD009',
+        stock: 10
+    })
+    manager.addProduct({
+        title: 'Calcetines',
+        description: 'Calcetines deportivos',
+        price: 8.25,
+        thumbnail: 'calcetines.jpg',
+        code: 'PRD010',
+        stock: 70
     })
 
     /* // // Actualizar un producto

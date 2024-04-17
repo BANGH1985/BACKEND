@@ -3,11 +3,18 @@ const ProductManager = require('./productManager.js')
 const app = express()
 const PORT =  8080
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 const manager = new ProductManager("./products.json")
 
 app.get('/products', (req, res) => {
     try {
-        const allProducts = manager.getProducts()
+        const limit = parseInt(req.query.limit)
+        let allProducts = manager.getProducts()
+        if (!isNaN(limit) && limit > 0) {
+            allProducts = allProducts.splice(0, limit)
+        }
         res.json(allProducts)
     } catch (error) {
         console.error("Error not Product found",error)

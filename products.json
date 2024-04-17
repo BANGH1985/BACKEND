@@ -25,5 +25,68 @@
     "thumbnail": "zapatos.jpg",
     "code": "PRD003",
     "stock": 80
+  },
+  {
+    "id": 4,
+    "title": "Sombrero",
+    "description": "Sombrero de verano",
+    "price": 15.99,
+    "thumbnail": "sombrero.jpg",
+    "code": "PRD004",
+    "stock": 30
+  },
+  {
+    "id": 5,
+    "title": "Bufanda",
+    "description": "Bufanda de lana",
+    "price": 12.5,
+    "thumbnail": "bufanda.jpg",
+    "code": "PRD005",
+    "stock": 60
+  },
+  {
+    "id": 6,
+    "title": "Gorra",
+    "description": "Gorra deportiva",
+    "price": 18.75,
+    "thumbnail": "gorra.jpg",
+    "code": "PRD006",
+    "stock": 45
+  },
+  {
+    "id": 7,
+    "title": "Gafas de sol",
+    "description": "Gafas de sol polarizadas",
+    "price": 29.99,
+    "thumbnail": "gafas.jpg",
+    "code": "PRD007",
+    "stock": 20
+  },
+  {
+    "id": 8,
+    "title": "Bolso",
+    "description": "Bolso de cuero sintético",
+    "price": 39.99,
+    "thumbnail": "bolso.jpg",
+    "code": "PRD008",
+    "stock": 55
+  },
+  {
+    "id": 9,
+    "title": "Reloj",
+    "description": "Reloj de pulsera",
+    "price": 99.99,
+    "thumbnail": "reloj.jpg",
+    "code": "PRD009",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "title": "Calcetines",
+    "description": "Calcetines deportivos",
+    "price": 8.25,
+    "thumbnail": "calcetines.jpg",
+    "code": "PRD010",
+    "stock": 70
   }
 ]

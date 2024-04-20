@@ -13,7 +13,7 @@ app.get('/products', (req, res) => {
         const limit = parseInt(req.query.limit)
         let allProducts = manager.getProducts()
         if (!isNaN(limit) && limit > 0) {
-            allProducts = allProducts.splice(0, limit)
+            allProducts = allProducts.slice(0, limit)
         }
         res.json(allProducts)
     } catch (error) {

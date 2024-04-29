@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "��#\u0000 \u0000B\u0000A\u0000C\u0000K\u0000E\u0000N\u0000D\u0000\r\u0000 \u0000",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node --watch tercer_desafio/src/app.js"
+    "start": "node cuarto_desafio/src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "express": "^4.19.2",
-    "moment": "^2.30.1"
+    "express-handlebars": "^7.1.2",
+    "socket.io": "^4.7.5"
   }
 }

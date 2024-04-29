@@ -25,7 +25,6 @@ const httpServer=app.listen(PORT, () => {
     try {
         console.log(`Listening to the port ${PORT}\nAcceder a:`)
         console.log(`\t1). http://localhost:${PORT}/api/products`)
-        console.log(`\t2). http://localhost:${PORT}/api/carts`)
     }
     catch (err) {
         console.log(err)

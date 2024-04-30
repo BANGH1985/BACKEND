@@ -9,7 +9,7 @@ function updateProductList(productList) {
 
     const productsDiv  = document.getElementById('list-products')
 
-    let productosHTML = "";
+    let productosHTML = ""
   
     productList.forEach((product) => {
         productosHTML += `<div class="card bg-secondary mb-3 mx-4 my-4" style="max-width: 20rem;">
@@ -32,8 +32,8 @@ function updateProductList(productList) {
         </div>
         
     </div>
-</div>`;
-    });
+</div>`
+    })
   
     productsDiv .innerHTML = productosHTML
   }

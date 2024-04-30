@@ -1,13 +1,1 @@
-[
-  {
-    "id": 1,
-    "title": "Camisa",
-    "description": "Camisa manga Larga",
-    "price": "25",
-    "category": "Ropa",
-    "status": true,
-    "thumbnail": "https://acdn.mitiendanube.com/stores/001/265/645/products/whatsapp-image-2021-11-27-at-15-46-34-8c0fb8de0adb42dee516380391294311-240-0.jpeg",
-    "code": "PR001",
-    "stock": "100"
-  }
-]
+[]

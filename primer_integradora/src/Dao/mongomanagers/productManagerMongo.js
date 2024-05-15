@@ -2,14 +2,6 @@ import { productsModel } from "../models/products.model.js"
 
 export default class ProductManager{
 
-getProductsView = async () => {
-    try {
-        return await productsModel.find().lean();
-
-    } catch (err) {
-        return err
-    }
-}
 
 getProducts = async () => {
     try {
@@ -47,7 +39,6 @@ updateProduct = async (id, product) => {
         return err
     }
 }
-    //DELETE
 deleteProduct = async (id) => {
     try {
         return await productsModel.findByIdAndDelete(id)

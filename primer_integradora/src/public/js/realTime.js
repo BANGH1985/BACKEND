@@ -36,9 +36,7 @@ function updateProductList(products) {
           </div>
         </div>
       </div>
-    </article>
-        
-        `
+    </article>`
   })
 
   div.innerHTML = productos

@@ -4,6 +4,7 @@ export default class MessageManager {
         try {
             return await messageModel.find().lean();
         } catch (error) {
+            console.error("Error al obtener mensajes:", error)
             return error
         }
     }
@@ -11,13 +12,14 @@ export default class MessageManager {
 
     createMessage = async (message) => {
         if (message.user.trim() === '' || message.message.trim() === '') {
-        // Evitar crear mensajes vacíos
+            console.warn("Intento de crear un mensaje vacío.")
             return null;
     }
 
     try {
         return await messageModel.create(message)
     } catch (error) {
+        console.error("Error al crear mensaje:", error)
         return error
     }
 }

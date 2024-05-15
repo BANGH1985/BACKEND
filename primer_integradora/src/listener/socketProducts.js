@@ -9,14 +9,14 @@ const socketProducts = (socketServer) => {
     
         socket.on("addProduct",async(obj)=>{
         await pm.addProduct(obj)
-        const listadeproductos  =   await pm.getProductsView()
+        const listadeproductos = await pm.getProducts()
         socketServer.emit("enviodeproducts",listadeproductos)
         })
     
         socket.on("deleteProduct",async(id)=>{
             console.log(id)
         await pm.deleteProduct(id)
-            const listadeproductos=await pm.getProductsView()
+            const listadeproductos=await pm.getProducts()
             socketServer.emit("enviodeproducts",listadeproductos)
             })
     

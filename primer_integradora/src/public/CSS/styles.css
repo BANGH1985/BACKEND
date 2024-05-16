@@ -1,88 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #f8f9fa; /* Color de fondo general */
 }
 
-#chat-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    padding: 20px;
-}
-
-#nombreusuario {
-    font-size: 20px;
-    color: #333333;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#chat-messages {
-    background-color: #f9f9f9;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    height: 300px;
-    overflow-y: scroll;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.message {
-    padding: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.message strong {
-    color: #007BFF;
-}
-
-form {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-form input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007BFF;
+.card {
     border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    background: linear-gradient(135deg, #3494e6, #ec6ead); /* Gradient de colores */
+    color: #fff; /* Color del texto principal */
 }
 
-form input[type="submit"]:hover {
-    background-color: #0056b3;
+.card-header {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
 }
 
-#clear-chat {
-    background-color: #ff4444;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-}
-
-#clear-chat:hover {
-    background-color: #cc0000;
-}

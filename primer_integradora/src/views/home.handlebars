@@ -1,31 +1,54 @@
 
-<div class="container mt-5">
-    <h1 class="text-center mb-4">PRODUCTS</h1>
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        {{#each listadeproductos}}
-        <div class="col mb-4">
-            <div class="card h-100 bg-light">
-                <div class="card-header bg-primary text-white">
-                    <i class="bi bi-tag"></i> Code: {{this.code}}
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title text-white">{{this.title}}</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-info-circle"></i> ID: {{this._id}}</li>
-                        <li><i class="bi bi-file-text"></i> Description: {{this.description}}</li>
-                        <li><i class="bi bi-currency-dollar"></i> Price: ${{this.price}}</li>
-                        <li><i class="bi bi-grid"></i> Category: {{this.category}}</li>
-                        <li><i class="bi bi-check-circle"></i> Status: {{this.status}}</li>
-                        <li><i class="bi bi-box"></i> Stock: {{this.stock}}</li>
-                        <li>
-                            <i class="bi bi-image"></i> Image: <img src="{{this.thumbnail}}" alt="{{this.title}}"
-                                class="img-fluid mt-2">
-                        </li>
-                    </ul>
+<div id="contenedor">
+    {{#each listadeproductos}}
+    <div class="card">
+        <div class="basicInfo">
+            <div class="title">
+                <div class="category">{{category}}</div>
+                <div class="name">{{title}}</div>
+                <div class="info"> {{description}}</div>
+            </div>
+            <div class="images">
+                <div class="img">
+                    <div class="item">
+                        <img src="{{thumbnail}}">
+                    </div>
                 </div>
             </div>
+            <div class="colors">
+                <label for="green">
+                    <div class="name">ss</div>
+                    <div class="ellipse" style="background:#CADB6E"></div>
+                </label>
+                <label for="black">
+                    <div class="name">Black</div>
+                    <div class="ellipse" style="background:#2B2B2B"></div>
+                </label>
+            </div>
+            <div class="addCard">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
         </div>
-        {{/each}}
+        <div class="mores">
+            <div class="stars">
+                <i class="fa-regular fa-star text-yellow"></i>
+                <i class="fa-regular fa-star text-yellow"></i>
+                <i class="fa-regular fa-star text-yellow"></i>
+                <i class="fa-regular fa-star text-yellow"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price">{{price}}</div>
+        </div>
     </div>
-</div>
+    {{/each}}
+    </div>
+
+
+
+
+
+
+
+
+
+   

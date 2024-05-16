@@ -19,11 +19,11 @@ const productSchema = new mongoose.Schema({
     },
     thumbnail: {
         type: String,
-        required: false // Ahora el campo no es requerido
+        required: false 
     },
     code: {
         type: String,
-        unique: true, // Se asegura que el código sea único
+        unique: true, 
         required: true
     },
     category: {

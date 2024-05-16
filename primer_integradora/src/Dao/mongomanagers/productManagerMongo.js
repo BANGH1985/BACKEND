@@ -3,6 +3,16 @@ import { productsModel } from "../models/products.model.js"
 export default class ProductManager{
 
 
+getProductsView = async () => {
+    try {
+        return await productsModel.find().lean();
+
+    } catch (err) {
+        return err
+    }
+}
+
+
 getProducts = async () => {
     try {
         return await productsModel.find().lean()
@@ -39,11 +49,13 @@ updateProduct = async (id, product) => {
         return err
     }
 }
-deleteProduct = async (id) => {
+deleteProduct = async (_id) => {
     try {
-        return await productsModel.findByIdAndDelete(id)
+        return await productsModel.findByIdAndDelete(_id)
     } catch (err) {
         return err
     }
 }
 }
+
+

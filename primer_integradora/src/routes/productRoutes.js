@@ -1,5 +1,5 @@
 import {Router} from "express"
-import ProductManager from "../Dao/filemanagers/controllers/productManager.js"
+import ProductManager from "../Dao/mongomanagers/productManagerMongo.js"
 import { __dirname } from "../utils.js"
 
 

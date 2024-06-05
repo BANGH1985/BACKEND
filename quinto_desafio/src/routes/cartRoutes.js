@@ -64,7 +64,8 @@ router.get('/:cid', async (req, res) => {
     try {
         const cart = await getPopulatedCart(cartId);
         res.render('cart', {
-            cart,
+            user: req.session.user,
+            cart
         });
     } catch (error) {
         console.error('Error al obtener el carrito:', error);

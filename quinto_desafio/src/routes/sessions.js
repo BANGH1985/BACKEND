@@ -19,7 +19,6 @@ router.post('/login', async (req, res) => {
     console.log(email, password)
     try {
         const user = await User.findOne({ email });
-        console.log(user)
         if (!user) return res.status(404).send('Usuario no encontrado');
         req.session.user = {
             id: user._id,
@@ -28,8 +27,7 @@ router.post('/login', async (req, res) => {
             email: user.email,
             age: user.age,
         };
-        console.log(req.session.user)
-        res.redirect('/profile');
+        res.redirect('/');
 
     } catch (err) {
         res.status(500).send('Error al iniciar sesión');

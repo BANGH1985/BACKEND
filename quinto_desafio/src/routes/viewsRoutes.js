@@ -47,13 +47,13 @@ routerV.get('/', async (req, res) => {
             const { prevLink, nextLink } = links(products);
             const { totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, docs, page } = products
             if (page > totalPages) return res.render('notFound', { pageNotFound: '/products' })
-            return res.render('products', { products: docs, totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, prevLink, nextLink, page, cart: cart.length });
+            return res.render('products', { user: req.session.user, products: docs, totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, prevLink, nextLink, page, cart: cart.length });
         }
         const products = await pm.getProducts({}, options);
         const { totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, docs } = products
         const { prevLink, nextLink } = links(products);
         if (page > totalPages) return res.render('notFound', { pageNotFound: '/products' })
-        return res.render('products', { products: docs, totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, prevLink, nextLink, page, cart: cart.length });
+        return res.render('products', { user: req.session.user, products: docs, totalPages, prevPage, nextPage, hasNextPage, hasPrevPage, prevLink, nextLink, page, cart: cart.length });
     } catch (error) {
         console.log(error);
     }

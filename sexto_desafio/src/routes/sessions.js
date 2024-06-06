@@ -12,6 +12,13 @@ router.get('/failregister', (req, res) => {
     res.send({ error: "fallo" });
 });
 
+router.get("/github", passport.authenticate("github", { scope: 'user:email' }), async (req, res) => {});
+
+router.get("/githubcallback", passport.authenticate("github", { failureRedirect: '/login' }), (req, res) => {
+    req.session.user = req.user;
+    res.redirect("/")
+});
+
 router.post('/login', passport.authenticate("login", { failureRedirect: '/api/sessions/faillogin' }), (req, res) => {
     if (!req.user) return res.status(400).send({ status: "error", error: "Datos Incorrectos" });
     req.session.user = {

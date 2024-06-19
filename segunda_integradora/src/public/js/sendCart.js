@@ -1,30 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Verificar si el usuario está en sesión y tiene un carrito asignado
-    fetch('/api/sessions/current', {
-        method: 'GET',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
+let cartId; // Variable global para almacenar el ID del carrito
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // Verificar si el usuario está en sesión y tiene un carrito asignado
+        const response = await fetch('/api/sessions/current', {
+            method: 'GET',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
         if (data.user && data.user.cart) {
-            cart = data.user.cart; // Inicializar `cart` con el valor de la sesión
+            cartId = data.user.cart; // Inicializar `cartId` con el valor del carrito en la sesión
         } else {
             console.error('Carrito no encontrado en la sesión del usuario');
         }
-    })
-    .catch(error => {
+    } catch (error) {
         console.error('Error al obtener el carrito de la sesión del usuario:', error);
-    });
+    }
 
-    fetchProducts();
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
 });
 
@@ -32,11 +28,6 @@ document.getElementById('filterForm').addEventListener('change', function() {
     fetchProducts();
 });
 
-async function getCartFromSession() {
-    const response = await fetch('/api/sessions/cart'); // Ruta para obtener el carrito de la sesión
-    const data = await response.json();
-    return data.cart; // Asegúrate de que el carrito se devuelva correctamente
-}
 async function fetchProducts(page = 1) {
     const query = document.getElementById('query').value;
     const availability = document.getElementById('availability').value;
